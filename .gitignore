@@ -39,3 +39,4 @@ facebox/julia
 facebox/unkown
 !facebox/.gitkeep
 tmp/
+www/camera_snapshots/*.jpg
