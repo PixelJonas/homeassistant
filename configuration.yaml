@@ -1,0 +1,19 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  packages: !include_dir_named packages
+  customize: !include customize.yaml
+
+speedtestdotnet:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: https://9mgmdhfpnssenlvzjcmeql8gtdja8s4z.ui.nabu.casa
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+zone: !include zones.yaml

@@ -1,0 +1,77 @@
+
+- cal_id: family12541217182110728138@group.calendar.google.com
+  entities:
+  - device_id: familie
+    ignore_availability: true
+    name: Familie
+    track: false
+
+- cal_id: rbbdvcvush57fkp2ajrmb2caio@group.calendar.google.com
+  entities:
+  - device_id: fff_lehrgangsplan
+    ignore_availability: true
+    name: '[FFF] Lehrgangsplan'
+    track: false
+
+- cal_id: g00e1o575gacl1cctlatch2smg@group.calendar.google.com
+  entities:
+  - device_id: fff_dienstplan
+    ignore_availability: true
+    name: '[FFF] Dienstplan'
+    track: true
+
+- cal_id: janz.jonas@gmail.com
+  entities:
+  - device_id: janz_jonas_hotmail_de
+    ignore_availability: true
+    name: janz.jonas@hotmail.de
+    track: true
+
+- cal_id: ri3p1e9pqmfat7bg2o9m857sh4@group.calendar.google.com
+  entities:
+  - device_id: kalenteri
+    ignore_availability: true
+    name: Kalenteri
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: false
+
+- cal_id: de.german#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: feiertage_in_deutschland
+    ignore_availability: true
+    name: Feiertage in Deutschland
+    track: true
+
+- cal_id: p#weather@group.v.calendar.google.com
+  entities:
+  - device_id: weather
+    ignore_availability: true
+    name: Weather
+    track: false
+
+- cal_id: p#weeknum@group.v.calendar.google.com
+  entities:
+  - device_id: week_numbers
+    ignore_availability: true
+    name: Week Numbers
+    track: false
+
+- cal_id: 42dr74v1oalngao086h9bqmfp4@group.calendar.google.com
+  entities:
+  - device_id: wochenplan
+    ignore_availability: true
+    name: Wochenplan
+    track: true
+
+- cal_id: jjanz@redhat.com
+  entities:
+  - device_id: jjanz_redhat_com
+    ignore_availability: true
+    name: jjanz@redhat.com
+    track: true

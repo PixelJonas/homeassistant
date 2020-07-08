@@ -1,0 +1,21 @@
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_broker_port
+  client_id: homeassistant
+  discovery: true
+  username: !secret mqtt_homeassistant_username
+  password: !secret mqtt_homeassistant_password
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+binary_sensor:
+  - platform: mqtt
+    name: HomeAssistant MQTT Connection
+    device_class: "connectivity"
+    state_topic: "hass/status"
+    payload_on: "online"
+    payload_off: "offline"

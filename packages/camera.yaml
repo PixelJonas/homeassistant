@@ -1,0 +1,5 @@
+camera:
+  - platform: uvc
+    nvr: 192.168.1.173
+    key: !secret unifi_nvr_api
+    password: !secret unifi_nvr_password

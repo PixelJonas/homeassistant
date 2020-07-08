@@ -1,0 +1,16 @@
+media_player:
+- platform: androidtv
+  host: !secret shield_static_ip
+  name: "NVidia SHIELD"
+  state_detection_rules:
+      'com.netflix.ninja':
+        - 'media_session_state'
+      'com.plexapp.android':
+        - 'media_session_state'
+      'com.google.android.youtube.tv':
+        - 'media_session_state'
+      'com.spotify.tv.android':
+        - 'audio_state'
+        - 'media_session_state'
+      'tv.twitch.android.app':
+        - 'media_session_state'

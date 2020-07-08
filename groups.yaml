@@ -1,0 +1,29 @@
+living_room_lights:
+  name: Living Room Lights
+  entities:
+      - light.living_room_center
+      - light.living_room_stand_1
+      - light.living_room_stand_2
+      - light.living_room_stripe
+home_occupancy:
+  name: People in the house
+  entities:
+    - person.jonas
+    - person.julia
+office_lights:
+  name: Office Light
+  icon: mdi:light-bulb
+  entities:
+    - light.office_center
+    - light.office_stand
+    - light.office_stripe
+active_lights:
+  name: Active Lights
+  icon: mdi:light-bulb
+  entities:
+    - group.living_room_lights
+    - group.office_lights
+    - light.gallery_stand
+    - light.kitchen_center
+    - light.stairs_center
+

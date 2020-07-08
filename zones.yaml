@@ -1,0 +1,10 @@
+- name: Work_Julia
+  latitude: 53.8843929
+  longitude: 10.813124
+  radius: 250
+  icon: mdi:needle
+- name: Home
+  latitude: 53.695973
+  longitude: 10.4390892
+  radius: 200
+  icon: mdi:account-multiple

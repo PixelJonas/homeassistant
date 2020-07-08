@@ -1,0 +1,37 @@
+scene:
+  - name: tropical
+    entities:
+      light.living_room_center:
+        state: true
+        rgb_color: [201, 165, 255]
+        brightness: 112
+      light.living_room_stand_1:
+        state: true
+        rgb_color: [255, 163, 93]
+        brightness: 112
+      light.living_room_stand_2:
+        state: true
+        rgb_color: [255, 150, 51]
+        brightness: 112
+      light.living_room_stripe:
+        state: true
+        rgb_color: [255, 202, 240]
+        brightness: 172
+  - name: living_room_dimm
+    entities:
+      group.living_room_lights:
+        state: true
+        rgb_color: [255, 188, 85]
+        brightness: 144
+  - name: living_room_full
+    entities:
+      group.living_room_lights:
+        state: true
+        rgb_color: [255, 255, 255]
+        brightness: 255
+  - name: kitchen_dimm
+    entities:
+      light.kitchen_center:
+        state: true
+        rgb_color: [255, 196, 119]
+        brightness: 255

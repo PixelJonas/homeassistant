@@ -1,0 +1,25 @@
+sensor:
+  - platform: rest
+    name: awsh_restmuell
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ strptime(value_json["termine"]["R02"][0].datum, "%d.%m.%y") }}'
+  - platform: rest
+    name: awsh_biomuell
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ strptime(value_json["termine"]["B02"][0].datum, "%d.%m.%y") }}'
+  - platform: rest
+    name: awsh_gelbmuell
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ strptime(value_json["termine"]["D02"][0].datum, "%d.%m.%y") }}'
+  - platform: rest
+    name: awsh_papiermuell
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ strptime(value_json["termine"]["P04"][0].datum, "%d.%m.%y") }}'
+  - platform: rest
+    name: awsh_weihnachtsbaum
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ strptime(value_json["termine"]["W0"][0].datum, "%d.%m.%y") }}'
+  - platform: rest
+    name: awsh_stoerung
+    resource: https://www.awsh.de/api_v2/collection_dates/1/ort/112/strasse/200/hausnummern/0/abfallarten/R02-B02-D02-P04-W0/kalender
+    value_template: '{{ value_json["stoerungen"]|length }}'

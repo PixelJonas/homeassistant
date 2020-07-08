@@ -1,0 +1,6 @@
+notify:
+  - name: ALL_DEVICES
+    platform: group
+    services:
+      - service: mobile_app_jonas_pixel4xl
+      - service: mobile_app_pixel3

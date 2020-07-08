@@ -1,0 +1,5 @@
+input_boolean:
+  guest_mode:
+    initial: off
+    name: Guest Mode
+    icon: mdi:people

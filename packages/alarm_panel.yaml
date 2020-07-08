@@ -1,0 +1,6 @@
+alarm_control_panel:
+- platform: manual
+  name: Home Alarm
+  code: !secret home_alarm_code
+  arming_time: 10
+  trigger_time: 4

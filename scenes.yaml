@@ -1,0 +1,129 @@
+- id: '1589230001577'
+  name: nanopixel_infinity_stones
+  entities:
+    light.nanopixel_segment_1:
+      brightness: 255
+      friendly_name: NanoPixel Segment 1
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.136
+      - 0.04
+    light.nanopixel_segment_2:
+      brightness: 255
+      friendly_name: NanoPixel Segment 2
+      hs_color:
+      - 44.941
+      - 100
+      rgb_color:
+      - 255
+      - 190
+      - 0
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.528
+      - 0.446
+    light.nanopixel_segment_3:
+      brightness: 255
+      friendly_name: NanoPixel Segment 3
+      hs_color:
+      - 134.824
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 63
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.17
+      - 0.703
+    light.nanopixel_segment_4:
+      brightness: 255
+      friendly_name: NanoPixel Segment 4
+      hs_color:
+      - 315.059
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 190
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.478
+      - 0.197
+    light.nanopixel_segment_5:
+      brightness: 255
+      friendly_name: NanoPixel Segment 5
+      hs_color:
+      - 60
+      - 100
+      rgb_color:
+      - 255
+      - 255
+      - 0
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.444
+      - 0.517
+    light.nanopixel_segment_6:
+      brightness: 255
+      friendly_name: NanoPixel Segment 6
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      state: 'on'
+      supported_features: 57
+      xy_color:
+      - 0.701
+      - 0.299
+- id: '1591015978697'
+  name: stairs_dimm
+  entities:
+    light.stairs_center:
+      brightness: 58
+      friendly_name: stairs_center
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1591015998768'
+  name: stairs_bright
+  entities:
+    light.stairs_center:
+      brightness: 148
+      friendly_name: stairs_center
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1591016028828'
+  name: gallery_dimm
+  entities:
+    light.gallery_stand:
+      brightness: 61
+      friendly_name: gallery_stand
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1591016114460'
+  name: gallery_bright
+  entities:
+    light.gallery_stand:
+      brightness: 146
+      friendly_name: gallery_stand
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
