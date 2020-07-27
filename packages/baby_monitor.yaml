@@ -1,0 +1,36 @@
+binary_sensor:
+  - platform: ffmpeg_noise
+    name: babymonitor_noise
+    input: rtsp://192.168.1.173:7447/5ea1cb21dc74403be4f85723_0
+    extra_arguments: -filter:a highpass=f=300,lowpass=f=2500,volume=volume=2 -codec:a libmp3lame -ar 16000
+    output: -f mp3 icecast://stream_user:stream_pw@192.168.1.173:8000/babyphone.mp3
+    initial_state: false
+    duration: 2
+    reset: 60
+    peak: -32
+
+input_boolean:
+  babyphone:
+    name: babymonitor
+    initial: off
+
+automation:
+ - alias: 'Babymonitor on'
+   trigger:
+     platform: state
+     entity_id: input_boolean.babymonitor
+     from: 'off'
+     to: 'on'
+   action:
+     service: ffmpeg.start
+     entity_id: binary_sensor.babymonitor_noise
+
+ - alias: 'Babymonitor off'
+   trigger:
+     platform: state
+     entity_id: input_boolean.babymonitor
+     from: 'on'
+     to: 'off'
+   action:
+     service: ffmpeg.stop
+     entity_id: binary_sensor.babymonitor_noise

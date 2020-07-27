@@ -1,7 +1,7 @@
 tts:
   - platform: google_translate
     service_name: google_say
-  - platform: watson_tts
-    watson_apikey: !secret watson_apikey
-    watson_url: !secret watson_url
-    voice: en-US_MichaelV2Voice
+  # - platform: watson_tts
+  #   watson_apikey: !secret watson_apikey
+  #   watson_url: !secret watson_url
+  #   voice: en-US_MichaelV2Voice
