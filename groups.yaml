@@ -26,4 +26,10 @@ active_lights:
     - light.gallery_stand
     - light.kitchen_center
     - light.stairs_center
-
+light_gallery:
+  name: Gallery Lights
+  icon: mdi:light-bulb
+  entities:
+    - light.gallery_nursery
+    - light.gallery_stand
+    - light.stairs_center
