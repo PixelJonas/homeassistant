@@ -1,0 +1,25 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: Check HomeAssistant Config
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  check:
+    name: Home Assistant Config Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - run: mv secrets.yaml.tmpl secrets.yaml
+
+      - name: Home Assistant Configuration Check
+        uses: ludeeus/action-ha-config-check@1.1.0
+        with:
+          # Relative path to your configuration directory if not in the root
+          config_path: /
