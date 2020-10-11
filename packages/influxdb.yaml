@@ -1,0 +1,8 @@
+influxdb:
+  host: influxdb.app.janz.digital
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: !secret influxdb_user_password
+  max_retries: 10
+  default_measurement: state

@@ -1,0 +1,121 @@
+recorder:
+  purge_keep_days: 40
+  db_url: !secret recorder_db_url
+  db_max_retries: 10
+
+
+sensor:
+#--- Jonas Home Stats ---
+  - platform: history_stats
+    name: jonas_home_stats_30d
+    entity_id: person.jonas
+    state: 'home'
+    type: time
+    end: '{{ now().replace(hour=0, minute=0, second=0) }}'
+    duration:
+      days: 30
+
+  - platform: history_stats
+    name: jonas_home_stats_current_week
+    entity_id: person.jonas
+    state: 'home'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: jonas_home_stats_last_week
+    entity_id: person.jonas
+    state: 'home'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
+    end: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+
+#--- Julia Home Stats ---
+
+  - platform: history_stats
+    name: julia_home_stats_30d
+    entity_id: person.julia
+    state: 'home'
+    type: time
+    end: '{{ now().replace(hour=0, minute=0, second=0) }}'
+    duration:
+      days: 30
+
+  - platform: history_stats
+    name: julia_home_stats_current_week
+    entity_id: person.julia
+    state: 'home'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: julia_home_stats_last_week
+    entity_id: person.julia
+    state: 'home'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
+    end: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+
+#--- MacBook Active Home Stats ---
+
+  - platform: history_stats
+    name: macbook_cam_active_stats_30d
+    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0, minute=0, second=0) }}'
+    duration:
+      days: 30
+
+  - platform: history_stats
+    name: macbook_cam_active_stats_current_week
+    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    state: 'on'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: macbook_cam_active_stats_last_week
+    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    state: 'on'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
+    end: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+
+#--- MacBook Active Home Stats ---
+
+  - platform: history_stats
+    name: macbook_active_stats_30d
+    entity_id: binary_sensor.macbook_pro_active
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0, minute=0, second=0) }}'
+    duration:
+      days: 30
+
+  - platform: history_stats
+    name: macbook_active_stats_current_week
+    entity_id: binary_sensor.macbook_pro_active
+    state: 'on'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: macbook_active_stats_last_week
+    entity_id: binary_sensor.macbook_pro_active
+    state: 'on'
+    type: time
+    start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
+    end: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
+
+binary_sensor:
+  - platform: template
+    sensors:
+      macbook_active:
+        friendly_name: "MacBook Active"
+        value_template: >-
+          {{ state_attr('sensor.macbook_pro_active','Locked') == 'None' }}
