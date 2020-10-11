@@ -20,6 +20,3 @@ jobs:
 
       - name: Home Assistant Configuration Check
         uses: ludeeus/action-ha-config-check@1.1.0
-        with:
-          # Relative path to your configuration directory if not in the root
-          config_path: /
