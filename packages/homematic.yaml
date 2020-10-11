@@ -1,0 +1,15 @@
+homematic:
+  local_port: 8060
+  interfaces:
+    default:
+      host: !secret homematic_ip
+      resolvenames: json
+      username: !secret homematic_username
+      password: !secret homematic_password
+      callback_ip: !secret homeassistant_ip
+      callback_port: 8060
+  hosts:
+    ccu2:
+      host: !secret homematic_ip
+      username: !secret homematic_username
+      password: !secret homematic_password

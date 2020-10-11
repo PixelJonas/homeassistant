@@ -5,12 +5,14 @@ default_config:
 homeassistant:
   packages: !include_dir_named packages
   customize: !include customize.yaml
+  external_url: !secret external_url
+  internal_url: !secret internal_url
 
 speedtestdotnet:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-http:
-  base_url: https://9mgmdhfpnssenlvzjcmeql8gtdja8s4z.ui.nabu.casa
+logger:
+  default: warning
+
 
 group: !include groups.yaml
 automation: !include automations.yaml

@@ -127,3 +127,54 @@
       is_deconz_group: false
       state: 'on'
       supported_features: 41
+- id: '1600414917206'
+  name: gallery night
+  entities:
+    light.gallery_stand:
+      brightness: 22
+      friendly_name: gallery_stand
+      is_deconz_group: false
+      state: 'on'
+      supported_features: 41
+- id: '1600630089684'
+  name: nursery dimm
+  entities:
+    light.gallery_nursery:
+      effect_list:
+      - colorloop
+      brightness: 255
+      hs_color:
+      - 44.69
+      - 56.863
+      rgb_color:
+      - 255
+      - 218
+      - 109
+      xy_color:
+      - 0.453
+      - 0.432
+      is_deconz_group: false
+      friendly_name: Nursery
+      supported_features: 61
+      state: 'on'
+- id: '1600630103763'
+  name: nursery night
+  entities:
+    light.gallery_nursery:
+      effect_list:
+      - colorloop
+      brightness: 255
+      hs_color:
+      - 44.69
+      - 56.863
+      rgb_color:
+      - 255
+      - 218
+      - 109
+      xy_color:
+      - 0.453
+      - 0.432
+      is_deconz_group: false
+      friendly_name: Nursery
+      supported_features: 61
+      state: 'on'
