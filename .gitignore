@@ -3,6 +3,9 @@
 .vscode
 ._*
 
+node-red/projects
+node-red/projects_
+
 *.pid
 *.xml
 *.csr
