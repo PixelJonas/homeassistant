@@ -142,7 +142,7 @@
     light.gallery_nursery:
       effect_list:
       - colorloop
-      brightness: 255
+      brightness: 241
       hs_color:
       - 44.69
       - 56.863
@@ -163,7 +163,7 @@
     light.gallery_nursery:
       effect_list:
       - colorloop
-      brightness: 255
+      brightness: 227
       hs_color:
       - 44.69
       - 56.863
@@ -176,5 +176,26 @@
       - 0.432
       is_deconz_group: false
       friendly_name: Nursery
+      supported_features: 61
+      state: 'on'
+- id: '1604234830598'
+  name: Bedroom Night
+  entities:
+    light.bedroom_nightlight:
+      effect_list:
+      - colorloop
+      brightness: 58
+      hs_color:
+      - 32.105
+      - 89.412
+      rgb_color:
+      - 255
+      - 148
+      - 26
+      xy_color:
+      - 0.581
+      - 0.393
+      is_deconz_group: false
+      friendly_name: bedroom nightlight
       supported_features: 61
       state: 'on'
