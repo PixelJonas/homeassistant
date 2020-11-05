@@ -58,11 +58,11 @@ sensor:
     start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
     end: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
 
-#--- MacBook Active Home Stats ---
+#--- MacBook Camera Active Home Stats ---
 
   - platform: history_stats
     name: macbook_cam_active_stats_30d
-    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    entity_id: binary_sensor.macbook_pro_logitech_brio_camera
     state: 'on'
     type: time
     end: '{{ now().replace(hour=0, minute=0, second=0) }}'
@@ -71,7 +71,7 @@ sensor:
 
   - platform: history_stats
     name: macbook_cam_active_stats_current_week
-    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    entity_id: binary_sensor.macbook_pro_logitech_brio_camera
     state: 'on'
     type: time
     start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 }}'
@@ -79,7 +79,7 @@ sensor:
 
   - platform: history_stats
     name: macbook_cam_active_stats_last_week
-    entity_id: binary_sensor.macbook_pro_logitech_brio_2
+    entity_id: binary_sensor.macbook_pro_logitech_brio_camera
     state: 'on'
     type: time
     start: '{{ as_timestamp( now().replace(hour=0, minute=0, second=0) ) - now().weekday() * 86400 - 604800 }}'
